@@ -1,0 +1,2 @@
+usr/lib/*/libwayland-client++.so.*
+usr/lib/*/libwayland-client-unstable++.so.*

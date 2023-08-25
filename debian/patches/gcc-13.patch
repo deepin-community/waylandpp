@@ -1,0 +1,182 @@
+Index: waylandpp/scanner/scanner.cpp
+===================================================================
+--- waylandpp.orig/scanner/scanner.cpp
++++ waylandpp/scanner/scanner.cpp
+@@ -24,6 +24,7 @@
+ #include <cctype>
+ #include <cmath>
+ #include <stdexcept>
++#include <cstdint>
+ 
+ #include "pugixml.hpp"
+ 
+Index: waylandpp/example/dump.cpp
+===================================================================
+--- waylandpp.orig/example/dump.cpp
++++ waylandpp/example/dump.cpp
+@@ -29,6 +29,7 @@
+  */
+ 
+ #include <iostream>
++#include <cstdint>
+ 
+ #include <wayland-client.hpp>
+ 
+Index: waylandpp/example/egl.cpp
+===================================================================
+--- waylandpp.orig/example/egl.cpp
++++ waylandpp/example/egl.cpp
+@@ -30,6 +30,7 @@
+ #include <stdexcept>
+ #include <iostream>
+ #include <array>
++#include <cstdint>
+ #include <wayland-client.hpp>
+ #include <wayland-client-protocol-extra.hpp>
+ #include <wayland-egl.hpp>
+Index: waylandpp/example/foreign_display.cpp
+===================================================================
+--- waylandpp.orig/example/foreign_display.cpp
++++ waylandpp/example/foreign_display.cpp
+@@ -29,6 +29,7 @@
+ 
+ #include <iostream>
+ #include <memory>
++#include <cstdint>
+ 
+ #include <wayland-client.hpp>
+ 
+Index: waylandpp/example/pingpong.cpp
+===================================================================
+--- waylandpp.orig/example/pingpong.cpp
++++ waylandpp/example/pingpong.cpp
+@@ -25,6 +25,7 @@
+ 
+ #include <iostream>
+ #include <thread>
++#include <cstdint>
+ 
+ #include <wayland-client.hpp>
+ #include <wayland-server.hpp>
+Index: waylandpp/example/proxy_wrapper.cpp
+===================================================================
+--- waylandpp.orig/example/proxy_wrapper.cpp
++++ waylandpp/example/proxy_wrapper.cpp
+@@ -35,6 +35,7 @@
+ #include <iostream>
+ #include <thread>
+ #include <unistd.h>
++#include <cstdint>
+ 
+ #include <wayland-client.hpp>
+ 
+Index: waylandpp/example/shm.cpp
+===================================================================
+--- waylandpp.orig/example/shm.cpp
++++ waylandpp/example/shm.cpp
+@@ -35,6 +35,7 @@
+ #include <ctime>
+ #include <algorithm>
+ #include <random>
++#include <cstdint>
+ 
+ #include <wayland-client.hpp>
+ #include <wayland-client-protocol-extra.hpp>
+Index: waylandpp/include/wayland-client.hpp
+===================================================================
+--- waylandpp.orig/include/wayland-client.hpp
++++ waylandpp/include/wayland-client.hpp
+@@ -33,6 +33,7 @@
+ #include <memory>
+ #include <string>
+ #include <vector>
++#include <cstdint>
+ #include <wayland-version.hpp>
+ #include <wayland-client-core.h>
+ #include <wayland-util.hpp>
+Index: waylandpp/include/wayland-cursor.hpp
+===================================================================
+--- waylandpp.orig/include/wayland-cursor.hpp
++++ waylandpp/include/wayland-cursor.hpp
+@@ -28,6 +28,8 @@
+ 
+ #include <memory>
+ #include <string>
++#include <cstdint>
++
+ #include <wayland-cursor.h>
+ #include <wayland-client-protocol.hpp>
+ #include <wayland-util.hpp>
+Index: waylandpp/include/wayland-server.hpp
+===================================================================
+--- waylandpp.orig/include/wayland-server.hpp
++++ waylandpp/include/wayland-server.hpp
+@@ -31,6 +31,7 @@
+ #include <list>
+ #include <memory>
+ #include <string>
++#include <cstdint>
+ 
+ #include <wayland-server-core.h>
+ #include <wayland-util.hpp>
+Index: waylandpp/include/wayland-util.hpp
+===================================================================
+--- waylandpp.orig/include/wayland-util.hpp
++++ waylandpp/include/wayland-util.hpp
+@@ -33,6 +33,7 @@
+ #include <typeinfo>
+ #include <utility>
+ #include <vector>
++#include <cstdint>
+ 
+ #include <wayland-client-core.h>
+ 
+Index: waylandpp/src/wayland-client.cpp
+===================================================================
+--- waylandpp.orig/src/wayland-client.cpp
++++ waylandpp/src/wayland-client.cpp
+@@ -23,6 +23,7 @@
+  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  */
+ 
++#include <cstdint>
+ #include <cstdarg>
+ #include <cstdio>
+ #include <cerrno>
+Index: waylandpp/src/wayland-cursor.cpp
+===================================================================
+--- waylandpp.orig/src/wayland-cursor.cpp
++++ waylandpp/src/wayland-cursor.cpp
+@@ -23,6 +23,7 @@
+  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  */
+ 
++#include <cstdint>
+ #include <wayland-cursor.hpp>
+ 
+ using namespace wayland;
+Index: waylandpp/src/wayland-server.cpp
+===================================================================
+--- waylandpp.orig/src/wayland-server.cpp
++++ waylandpp/src/wayland-server.cpp
+@@ -26,6 +26,8 @@
+ #include <stdexcept>
+ #include <iostream>
+ #include <limits>
++#include <cstdint>
++
+ #include <wayland-server-core.h>
+ #include <wayland-server.hpp>
+ 
+Index: waylandpp/src/wayland-util.cpp
+===================================================================
+--- waylandpp.orig/src/wayland-util.cpp
++++ waylandpp/src/wayland-util.cpp
+@@ -23,6 +23,7 @@
+  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  */
+ 
++#include <cstdint>
+ #include <wayland-util.hpp>
+ 
+ #include <cerrno>
