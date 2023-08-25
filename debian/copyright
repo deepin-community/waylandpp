@@ -1,13 +1,208 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: template-repository
-Source: https://github.com/deepin-community/template-repository
+Upstream-Name: waylandpp
+Source: https://github.com/NilsBrause/waylandpp
 
 Files: *
-Copyright: 2023 Tsic404 <liuheng@deepin.org>
-License: GPL-2+
- This package is free software; you can redistribute it and/or modify
+Copyright: 2014-2019, Nils Christopher Brause
+License: BSD-2-Clause
+
+Files: Doxyfile.in
+ example/Makefile
+ include/wayland-client.hpp
+ include/wayland-cursor.hpp
+ include/wayland-egl.hpp
+ include/wayland-util.hpp
+ include/wayland-version.hpp.in
+ src/wayland-client.cpp
+ src/wayland-cursor.cpp
+ src/wayland-egl.cpp
+ src/wayland-util.cpp
+Copyright: 2014-2019, Nils Christopher Brause, Philipp Kerling
+License: BSD-2-clause
+
+Files: example/CMakeLists.txt
+ wayland-client++.pc.in
+ wayland-client-extra++.pc.in
+ wayland-client-unstable++.pc.in
+ wayland-cursor++.pc.in
+ wayland-egl++.pc.in
+ wayland-scanner++.pc.in
+Copyright: 2014-2019, Philipp Kerling, Nils Christopher Brause
+License: BSD-2-clause
+
+Files: protocols/unstable/keyboard-shortcuts-inhibit-unstable-v1.xml
+ protocols/unstable/xdg-foreign-unstable-v1.xml
+ protocols/unstable/xdg-foreign-unstable-v2.xml
+ protocols/unstable/xdg-output-unstable-v1.xml
+ protocols/unstable/xwayland-keyboard-grab-unstable-v1.xml
+Copyright: 2015-2016, Red Hat Inc.
+  2017, Red Hat Inc.
+License: Expat
+
+Files: protocols/extra/presentation-time.xml
+ protocols/extra/viewporter.xml
+ protocols/unstable/input-timestamps-unstable-v1.xml
+ protocols/unstable/linux-dmabuf-unstable-v1.xml
+Copyright: 2013-2014, Collabora, Ltd.
+  2013-2016, Collabora, Ltd.
+  2014-2015, Collabora, Ltd.
+  2017, Collabora, Ltd.
+License: Expat
+
+Files: example/dump.cpp
+ example/foreign_display.cpp
+ example/proxy_wrapper.cpp
+Copyright: 2017-2019, Philipp Kerling
+  2018-2019, Philipp Kerling
+License: BSD-2-clause
+
+Files: example/egl.cpp
+ example/shm.cpp
+Copyright: 2014-2019, Nils Christopher Brause, Philipp Kerling, Zsolt Bölöny
+License: BSD-2-clause
+
+Files: protocols/unstable/input-method-unstable-v1.xml
+ protocols/unstable/text-input-unstable-v1.xml
+Copyright: 2012-2013, Intel Corporation
+License: Expat
+
+Files: protocols/unstable/pointer-constraints-unstable-v1.xml
+ protocols/unstable/relative-pointer-unstable-v1.xml
+Copyright: 2014, Jonas Ådahl
+  2015, Red Hat Inc.
+License: Expat
+
+Files: protocols/unstable/tablet-unstable-v1.xml
+ protocols/unstable/tablet-unstable-v2.xml
+Copyright: 2014, Stephen "Lyude" Chandler Paul
+  2015-2016, Red Hat, Inc.
+License: Expat
+
+Files: CMakeLists.txt
+Copyright: 2014-2019, Philipp Kerling, Nils Christopher Brause, Craig Andrews, Tobias Kortkamp, Balint Reczey
+License: BSD-2-clause
+
+Files: scanner/scanner.cpp
+Copyright: 2014-2019, Nils Christopher Brause, Philipp Kerling, Bernd Kuhls
+License: GPL-3+
+
+Files: protocols/unstable/text-input-unstable-v3.xml
+Copyright: 2012-2013, Intel Corporation
+  2015-2016, Jan Arne Petersen
+  2017-2018, Red Hat, Inc.
+  2018, Purism SPC
+License: NTP-disclaimer
+
+Files: protocols/unstable/linux-explicit-synchronization-unstable-v1.xml
+Copyright: 2016, The Chromium Authors.
+  2017, Intel Corporation
+  2018, Collabora, Ltd
+License: Expat
+
+Files: protocols/wayland.xml
+Copyright: 2008-2011, Kristian Høgsberg
+  2010-2011, Intel Corporation
+  2012-2013, Collabora, Ltd.
+License: Expat
+
+Files: protocols/unstable/xdg-shell-unstable-v6.xml
+Copyright: 2008-2013, Kristian HÃ¸gsberg
+  2010-2013, Intel Corporation
+  2013, Jasper St. Pierre
+  2013, Rafael Antognolli
+License: Expat
+
+Files: protocols/extra/xdg-shell.xml
+Copyright: 2008-2013, Kristian HÃ¸gsberg
+  2010-2013, Intel Corporation
+  2013, Jasper St. Pierre
+  2013, Rafael Antognolli
+  2015-2017, Red Hat Inc.
+  2015-2017, Samsung Electronics Co., Ltd
+License: Expat
+
+Files: protocols/unstable/fullscreen-shell-unstable-v1.xml
+Copyright: 2015, Jason Ekstrand
+  2015, Jonas Ådahl
+  2016, Yong Bakos
+License: Expat
+
+Files: protocols/unstable/primary-selection-unstable-v1.xml
+Copyright: 2015-2016, Red Hat
+License: Expat
+
+Files: protocols/unstable/idle-inhibit-unstable-v1.xml
+Copyright: 2015, Samsung Electronics Co., Ltd
+License: Expat
+
+Files: protocols/unstable/xdg-decoration-unstable-v1.xml
+Copyright: 2018, Simon Ser
+License: Expat
+
+Files: debian/*
+Copyright: 2017 wsnipex <wsnipex@a1.net>
+           2019 Balint Reczey <rbalint@ubuntu.com>
+License: GPL-3+
+
+License: BSD-2-clause
+ Redistribution and use in source and binary forms,
+ with or without modification,
+ are permitted provided that the following conditions are met:
+  * Redistributions of source code must retain
+    the above copyright notice, this list of conditions
+    and the following disclaimer.
+  * Redistributions in binary form must reproduce
+    the above copyright notice, this list of conditions
+    and the following disclaimer
+    in the documentation and/or other materials
+    provided with the distribution.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS "AS IS"
+ AND ANY EXPRESS OR IMPLIED WARRANTIES,
+ INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+ OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ ARE DISCLAIMED.
+ IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE
+ FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY,
+ OR CONSEQUENTIAL DAMAGES
+ (INCLUDING, BUT NOT LIMITED TO,
+ PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+ WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ (INCLUDING NEGLIGENCE OR OTHERWISE)
+ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+ EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+License: Expat
+ Permission is hereby granted,
+ free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"),
+ to deal in the Software without restriction,
+ including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense,
+ and/or sell copies of the Software,
+ and to permit persons to whom the Software is furnished to do so,
+ subject to the following conditions:
+ .
+ The above copyright notice and this permission notice shall be included
+ in all copies or substantial portions of the Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS",
+ WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+ INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+ OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE
+ AND NONINFRINGEMENT.
+ IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE
+ FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE
+ OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+License: GPL-3+
+ This program is free software: you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
- the Free Software Foundation; either version 2 of the License, or
+ the Free Software Foundation, either version 3 of the License, or
  (at your option) any later version.
  .
  This package is distributed in the hope that it will be useful,
@@ -16,7 +211,26 @@ License: GPL-2+
  GNU General Public License for more details.
  .
  You should have received a copy of the GNU General Public License
- along with this program. If not, see <https://www.gnu.org/licenses/>
+ along with this program. If not, see <https://www.gnu.org/licenses/>.
  .
  On Debian systems, the complete text of the GNU General
- Public License version 2 can be found in "/usr/share/common-licenses/GPL-2".
+ Public License version 3 can be found in "/usr/share/common-licenses/GPL-3".
+
+License: NTP-disclaimer
+ Permission to use, copy, modify, distribute, and sell this software and its
+ documentation for any purpose is hereby granted without fee, provided that
+ the above copyright notice appear in all copies and that both that copyright
+ notice and this permission notice appear in supporting documentation, and
+ that the name of the copyright holders not be used in advertising or
+ publicity pertaining to distribution of the software without specific,
+ written prior permission.  The copyright holders make no representations
+ about the suitability of this software for any purpose.  It is provided "as
+ is" without express or implied warranty.
+ .
+ THE COPYRIGHT HOLDERS DISCLAIM ALL WARRANTIES WITH REGARD TO THIS SOFTWARE,
+ INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS, IN NO
+ EVENT SHALL THE COPYRIGHT HOLDERS BE LIABLE FOR ANY SPECIAL, INDIRECT OR
+ CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE,
+ DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER
+ TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE
+ OF THIS SOFTWARE.

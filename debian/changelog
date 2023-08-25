@@ -1,5 +1,147 @@
-template-repository (1.0-1) unstable; urgency=medium
+waylandpp (1.0.0-5) unstable; urgency=medium
 
-  * Initial release
+  * added '#include <cstdint>' stances. Closes: #1037893
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Georges Khaznadar <georgesk@debian.org>  Mon, 17 Jul 2023 19:12:01 +0200
+
+waylandpp (1.0.0-4) unstable; urgency=medium
+
+  * added usr/lib/*/libwayland-client-unstable++.so.* in the file
+    d/libwayland-client++1.install, removed it from d/not-installed.
+    Closes: #1035462
+  * fixed Standards-Version: 4.6.0.2 -> 4.6.2
+  * declared libwayland-client-unstable++.so in d/libwayland-client++1.shlib
+
+ -- Georges Khaznadar <georgesk@debian.org>  Wed, 03 May 2023 17:39:41 +0200
+
+waylandpp (1.0.0-3) unstable; urgency=medium
+
+  * Closes: #1011107, thanks to Thadeu Lima de Souza Cascardo;
+    added conflict/replace clauses for libraries
+
+ -- Georges Khaznadar <georgesk@debian.org>  Tue, 17 May 2022 09:32:49 +0200
+
+waylandpp (1.0.0-2) unstable; urgency=medium
+
+  * used Vasyl Gello's debdiff, thanks!
+    Closes: #1010921
+    Closes: #1010956
+
+ -- Georges Khaznadar <georgesk@debian.org>  Sat, 14 May 2022 17:23:01 +0200
+
+waylandpp (1.0.0-1) unstable; urgency=medium
+
+  * new upstream version 1.0.0
+  * added the new binary package libwayland-server++0, which contains
+    new libraries created upstream
+  * created a separate package waylandpp-doc. Closes: #1010087
+
+ -- Georges Khaznadar <georgesk@debian.org>  Fri, 06 May 2022 18:13:23 +0200
+
+waylandpp (0.2.10-1) unstable; urgency=medium
+
+  * New upstream version 0.2.10, Closes: #1006812
+  * added a build-dependency on doxygen
+
+ -- Georges Khaznadar <georgesk@debian.org>  Sat, 16 Apr 2022 15:44:00 +0200
+
+waylandpp (0.2.9-2) unstable; urgency=medium
+
+  * moved "usr/lib/*/cmake/*" to d/not-installed : those files contain
+    paths of the build process, which are not reproducible, hence triggering
+    errors for the reproducible-build test.
+
+ -- Georges Khaznadar <georgesk@debian.org>  Fri, 04 Mar 2022 11:10:53 +0100
+
+waylandpp (0.2.9-1) unstable; urgency=medium
+
+  * adopted the package. Closes: #1003739
+  * new upstream version
+  * bumped Standards-Version: 4.6.0.2, debhelper-compat (= 13)
+  * fixed d/waylandpp-dev.install for missing files reported by dh_missing;
+    added usr/lib/*/libwayland-client-unstable++.so.* to a new file
+    d/not-installed
+
+ -- Georges Khaznadar <georgesk@debian.org>  Thu, 03 Mar 2022 17:53:51 +0100
+
+waylandpp (0.2.8-2) unstable; urgency=medium
+
+  * Orphaning the package
+  * debian/control: Move packaging under the Debian project on Salsa
+  * debian/watch: Fix pattern
+
+ -- Balint Reczey <balint@balintreczey.hu>  Fri, 14 Jan 2022 20:05:05 +0100
+
+waylandpp (0.2.8-1) unstable; urgency=medium
+
+  * ACK NMU, thanks Christian for the fix
+  * New upstream version 0.2.8
+  * Drop symbols files in favor of using shlibs files
+  * Drop 01_FTBFS-gcc-10.patch merged upstream
+
+ -- Balint Reczey <rbalint@ubuntu.com>  Sat, 08 Aug 2020 17:56:52 +0200
+
+waylandpp (0.2.5-2.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Fix build with gcc 10 (Gentoo patch) (CLoses: #957924)
+
+ -- Christian Marillat <marillat@debian.org>  Tue, 28 Jul 2020 23:38:44 +0200
+
+waylandpp (0.2.5-2) unstable; urgency=medium
+
+  [ Balint Reczey ]
+  * Update symbols file(s)
+
+  [ Helmut Grohne ]
+  * Fix FTBFS: Mark a template symbol as optional
+  * Fix FTCBFS: Pass a WAYLAND_SCANNERPP to cmake. (Closes: #946078)
+
+ -- Balint Reczey <rbalint@ubuntu.com>  Wed, 18 Dec 2019 15:40:57 +0100
+
+waylandpp (0.2.5-1) unstable; urgency=medium
+
+  * debian/control: Setting myself as the Maintainer to get notified about bugs.
+    Thanks to Wolfgang Schupp for the initial packaging
+  * Clean up symbols files manually
+
+ -- Balint Reczey <rbalint@ubuntu.com>  Tue, 04 Jun 2019 13:39:25 +0200
+
+waylandpp (0.2.5-1~exp2) experimental; urgency=medium
+
+  * Create symbols files with amd64 symbols
+  * Build-depend on pkg-kde-tools and use pkgkde-symbolshelper in the build
+
+ -- Balint Reczey <rbalint@ubuntu.com>  Mon, 03 Jun 2019 23:40:23 +0200
+
+waylandpp (0.2.5-1~exp1) experimental; urgency=medium
+
+  [ Balint Reczey ]
+  * Drop template-only packaging files
+  * Packaging is in 3.0 (quilt) format
+  * Bump compat level to 12
+  * Fix debian/copyright
+  * debian/rules: Drop templates
+  * debian/control:
+    - Extend descriptions
+    - wayland-scanner++ is Multiarch: allowed
+    - Tidy up using cme fix
+    - Point Vcs-* to Salsa
+    - Add myself as uploader
+  * Fix building unstable protocols
+  * Append major SO version to library package names
+  * Make the -dev package depend on libraries of the same binary version
+  * Fix library SO versioning
+  * First upload to Debian (Closes: #922522)
+  * Add symbols files
+  * Add Salsa CI configuration
+  * Fix package descriptions
+  * Fix debian/copyright
+  * New upstream version 0.2.5
+  * Drop obsolete patches
+  * Update copyright
+
+  [ wsnipex ]
+  * Initial packaging
+
+ -- Balint Reczey <rbalint@ubuntu.com>  Sun, 24 Feb 2019 21:41:19 +0100
